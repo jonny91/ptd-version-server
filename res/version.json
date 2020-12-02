@@ -1,0 +1,19 @@
+{
+  "data": {
+    "default": {
+      "platform": "default",
+      "v": "0.1",
+      "url": "https://www.qq.com"
+    },
+    "5fun": {
+      "platform": "5fun",
+      "v": "0.1",
+      "url": "https://www.5fun.com"
+    },
+    "taptap": {
+      "platform": "taptap",
+      "v": "0.1",
+      "url": "https://www.taptap.com"
+    }
+  }
+}
