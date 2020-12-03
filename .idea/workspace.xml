@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4feff8-1cfb-4c29-8748-6a55c8f759da" name="Default Changelist" comment="PTD 版本验证项目">
-      <change afterPath="$PROJECT_DIR$/controlls/mission.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlls/mq.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlls/version.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dto/message.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controlls/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlls/mq.go" beforeDir="false" afterPath="$PROJECT_DIR$/controlls/mq.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dto/message.go" beforeDir="false" afterPath="$PROJECT_DIR$/dto/message.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/version.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/versionReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/versionReader.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go/1.13.1/libexec" />
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.14.4/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -43,15 +61,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/controlls" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
@@ -75,17 +107,34 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PTD 版本验证项目" />
     <option name="LAST_COMMIT_MESSAGE" value="PTD 版本验证项目" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn" />
+      </map>
+    </environment>
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606586131653">
-      <screen x="71" y="25" width="1721" height="1095" />
+    <state x="110" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607014485238">
+      <screen x="0" y="23" width="1244" height="777" />
     </state>
+    <state x="110" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1244.777@0.23.1244.777" timestamp="1607014485238" />
     <state x="393" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog/68.25.1724.1095@68.25.1724.1095" timestamp="1606583835175" />
     <state x="395" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog/71.25.1721.1095@71.25.1721.1095" timestamp="1606586131653" />
     <state x="1400" y="578" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606978323308">
@@ -96,6 +145,10 @@
       <screen x="71" y="25" width="1721" height="1095" />
     </state>
     <state width="632" height="466" key="DebuggerActiveHint/71.25.1721.1095@71.25.1721.1095" timestamp="1606586575428" />
+    <state x="521" y="280" key="EnvironmentVariablesDialog" timestamp="1607010229807">
+      <screen x="0" y="23" width="1243" height="777" />
+    </state>
+    <state x="521" y="280" key="EnvironmentVariablesDialog/0.23.1243.777@0.23.1243.777" timestamp="1607010229807" />
     <state width="2318" height="426" key="GridCell.Tab.0.bottom" timestamp="1606986821893">
       <screen x="45" y="25" width="3395" height="1415" />
     </state>
@@ -168,21 +221,47 @@
     <state width="1679" height="355" key="GridCell.Tab.1.right/54.25.3386.1415/3440.25.2560.1415@54.25.3386.1415" timestamp="1606799549215" />
     <state width="1684" height="370" key="GridCell.Tab.1.right/68.25.1724.1095@68.25.1724.1095" timestamp="1606583906619" />
     <state width="1679" height="520" key="GridCell.Tab.1.right/71.25.1721.1095@71.25.1721.1095" timestamp="1606587459956" />
+    <state width="243" height="457" key="HiddenNamespacesPopup" timestamp="1607014502002">
+      <screen x="0" y="23" width="1244" height="777" />
+    </state>
+    <state width="243" height="457" key="HiddenNamespacesPopup/0.23.1244.777@0.23.1244.777" timestamp="1607014502002" />
+    <state x="123" y="50" key="SettingsEditor" timestamp="1607010234462">
+      <screen x="0" y="23" width="1243" height="777" />
+    </state>
+    <state x="123" y="50" key="SettingsEditor/0.23.1243.777@0.23.1243.777" timestamp="1607010234462" />
     <state x="833" y="430" key="Vcs.Push.Dialog.v2" timestamp="1606909614339">
       <screen x="50" y="25" width="3390" height="1415" />
     </state>
     <state x="833" y="430" key="Vcs.Push.Dialog.v2/50.25.3390.1415/3440.25.2560.1415@50.25.3390.1415" timestamp="1606909614339" />
+    <state x="526" y="295" width="391" height="232" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1607014530935">
+      <screen x="0" y="23" width="1244" height="777" />
+    </state>
+    <state x="526" y="295" width="391" height="232" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.23.1244.777@0.23.1244.777" timestamp="1607014530935" />
+    <state x="391" y="433" width="346" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607016627439">
+      <screen x="0" y="23" width="1246" height="777" />
+    </state>
+    <state x="390" y="433" width="346" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1244.777@0.23.1244.777" timestamp="1607015196912" />
+    <state x="391" y="433" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1246.777@0.23.1246.777" timestamp="1607016627439" />
+    <state x="301" y="156" width="458" height="510" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607014790232">
+      <screen x="0" y="23" width="1245" height="777" />
+    </state>
+    <state x="301" y="156" width="458" height="510" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1245.777@0.23.1245.777" timestamp="1607014790232" />
     <state x="1039" y="611" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606909570953">
       <screen x="50" y="25" width="3390" height="1415" />
     </state>
     <state x="1039" y="611" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/50.25.3390.1415/3440.25.2560.1415@50.25.3390.1415" timestamp="1606909570953" />
+    <state x="319" y="44" width="604" height="735" key="find.popup" timestamp="1607016013998">
+      <screen x="0" y="23" width="1245" height="777" />
+    </state>
+    <state x="319" y="44" width="604" height="735" key="find.popup/0.23.1245.777@0.23.1245.777" timestamp="1607016013998" />
     <state x="1024" y="586" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606909601030">
       <screen x="50" y="25" width="3390" height="1415" />
     </state>
     <state x="1024" y="586" key="git4idea.remote.GitConfigureRemotesDialog/50.25.3390.1415/3440.25.2560.1415@50.25.3390.1415" timestamp="1606909601030" />
-    <state x="1081" y="340" width="1322" height="874" key="search.everywhere.popup" timestamp="1606985737486">
-      <screen x="45" y="25" width="3395" height="1415" />
+    <state x="379" y="196" width="670" height="480" key="search.everywhere.popup" timestamp="1607013370003">
+      <screen x="0" y="23" width="1243" height="777" />
     </state>
+    <state x="379" y="196" width="670" height="480" key="search.everywhere.popup/0.23.1243.777@0.23.1243.777" timestamp="1607013370003" />
     <state x="1081" y="340" width="1322" height="874" key="search.everywhere.popup/45.25.3395.1415/3440.25.2560.1415@45.25.3395.1415" timestamp="1606985737486" />
     <state x="596" y="269" width="670" height="676" key="search.everywhere.popup/71.25.1721.1095@71.25.1721.1095" timestamp="1606587219477" />
   </component>

@@ -1,6 +1,8 @@
 package controlls
 
 import (
+	"PTDVersionServer/dto"
+	"encoding/json"
 	"fmt"
 	"github.com/nsqio/go-nsq"
 	"log"
@@ -24,7 +26,14 @@ func (h *MessageHandler) HandleMessage(m *nsq.Message) error {
 
 	//write to db
 	fmt.Println("get from mq: " + string(m.Body))
-
+	msg := &dto.MissionResult{}
+	err := json.Unmarshal(m.Body, msg)
+	if err != nil {
+		fmt.Println(err)
+		return err
+	}
+	DB.AutoMigrate(msg)
+	DB.Create(msg)
 	return nil
 }
 

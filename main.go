@@ -5,12 +5,10 @@ import (
 	"PTDVersionServer/controlls"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"sync"
 )
 
 var (
 	err error
-	wg  sync.WaitGroup
 )
 
 func main() {
@@ -23,6 +21,12 @@ func main() {
 		fmt.Println(err)
 	}
 
+	err = controlls.InitDB()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer controlls.DB.Close()
 	for i := 0; i < 3; i++ {
 		go controlls.ReceiveFromMQ("mission")
 	}
