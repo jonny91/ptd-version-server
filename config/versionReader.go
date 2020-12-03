@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"encoding/json"
@@ -15,12 +15,13 @@ type Config struct {
 }
 
 type VersionConfig struct {
-	Platform string `json:"platform"`
-	V        string `json:"v"`
-	Url      string `json:"url"`
+	Platform     string          `json:"platform"`
+	V            string          `json:"v"`
+	Url          string          `json:"url"`
+	UpdateConfig map[string]bool `json:"update"`
 }
 
-func readAll() bool {
+func ReadAll() bool {
 	file, err := os.Open("./res/version.json")
 	if err != nil {
 		fmt.Println(err)
