@@ -14,14 +14,16 @@ func HandleMission(context *gin.Context) {
 	state := context.PostForm("state")
 	platform := context.PostForm("platform")
 	cards := context.PostForm("cards")
+	deviceModel := context.PostForm("deviceModel")
 	now := time.Now().Format("2006/01/02 15:04:05")
 
 	m := &dto.MissionResult{
-		Time:      now,
-		MissionId: missionId,
-		Platform:  platform,
-		State:     state,
-		Cards:     cards,
+		Time:        now,
+		MissionId:   missionId,
+		Platform:    platform,
+		State:       state,
+		Cards:       cards,
+		DeviceModel: deviceModel,
 	}
 
 	resultStr, _ := json.Marshal(m)

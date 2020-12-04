@@ -5,11 +5,12 @@ type Message struct {
 }
 
 type MissionResult struct {
-	Time      string `gorm:"type:timestamp"`
-	Platform  string `gorm:"type:varchar(100)"`
-	MissionId string `gorm:"type:varchar(20)"`
-	State     string `gorm:"type:varchar(10)"`
-	Cards     string `gorm:"type:varchar(100)"`
+	Time        string `gorm:"type:timestamp"`
+	Platform    string `gorm:"type:varchar(100)"`
+	DeviceModel string
+	MissionId   string `gorm:"type:varchar(20)"`
+	State       string `gorm:"type:varchar(10)"`
+	Cards       string `gorm:"type:varchar(100)"`
 }
 
 func (MissionResult) TableName() string {

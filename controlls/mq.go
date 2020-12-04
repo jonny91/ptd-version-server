@@ -25,7 +25,6 @@ func (h *MessageHandler) HandleMessage(m *nsq.Message) error {
 	}
 
 	//write to db
-	fmt.Println("get from mq: " + string(m.Body))
 	msg := &dto.MissionResult{}
 	err := json.Unmarshal(m.Body, msg)
 	if err != nil {

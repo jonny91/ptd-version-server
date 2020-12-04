@@ -33,6 +33,7 @@ func main() {
 
 	gin.SetMode(gin.ReleaseMode)
 	g := gin.Default()
+	g.Static("/files", "./static/files")
 	g.LoadHTMLGlob("./html/*")
 
 	g.GET("/ptd", controlls.HandleVersion)
