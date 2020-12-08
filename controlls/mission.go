@@ -12,6 +12,7 @@ import (
 
 func HandleMission(context *gin.Context) {
 	missionId := context.PostForm("missionId")
+	roleName := context.PostForm("roleName")
 	state := context.PostForm("state")
 	platform := context.PostForm("platform")
 	cards := context.PostForm("cards")
@@ -22,6 +23,7 @@ func HandleMission(context *gin.Context) {
 
 	m := &dto.MissionResult{
 		Time:        now,
+		RoleName:    roleName,
 		MissionId:   missionId,
 		Platform:    platform,
 		State:       state,

@@ -6,8 +6,9 @@ type Message struct {
 
 type MissionResult struct {
 	Time        string `gorm:"type:timestamp"`
+	RoleName    string `gorm:"type:varchar(255)"`
 	Platform    string `gorm:"type:varchar(100)"`
-	DeviceModel string
+	DeviceModel string `gorm:"type:varchar(255)"`
 	MissionId   string `gorm:"type:varchar(20)"`
 	State       string `gorm:"type:varchar(10)"`
 	Cards       string `gorm:"type:varchar(100)"`
