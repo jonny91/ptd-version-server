@@ -42,7 +42,6 @@ func InitMQ() error {
 	if err != nil {
 		return err
 	}
-
 	isInit = true
 	return nil
 }
@@ -63,6 +62,7 @@ func ReceiveFromMQ(topic string) {
 		fmt.Println(err)
 		return
 	}
+	consumer.SetLoggerLevel(nsq.LogLevelWarning)
 
 	consumer.AddHandler(&MessageHandler{})
 
