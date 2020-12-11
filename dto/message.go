@@ -12,7 +12,8 @@ type MissionResult struct {
 	MissionId   string `gorm:"type:varchar(20)"`
 	State       string `gorm:"type:varchar(10)"`
 	Cards       string `gorm:"type:varchar(100)"`
-	Duration    int    //战斗时长
+	Star        int
+	Duration    int //战斗时长
 }
 
 func (MissionResult) TableName() string {

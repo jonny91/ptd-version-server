@@ -18,9 +18,14 @@ func HandleMission(context *gin.Context) {
 	cards := context.PostForm("cards")
 	deviceModel := context.PostForm("deviceModel")
 	durationStr := context.PostForm("duration")
+	starStr := context.PostForm("star")
 	duration, _ := strconv.Atoi(durationStr)
 	now := time.Now().Format("2006/01/02 15:04:05")
 
+	star, err := strconv.Atoi(starStr)
+	if err != nil {
+		star = 0
+	}
 	m := &dto.MissionResult{
 		Time:        now,
 		RoleName:    roleName,
@@ -29,6 +34,7 @@ func HandleMission(context *gin.Context) {
 		State:       state,
 		Cards:       cards,
 		DeviceModel: deviceModel,
+		Star:        star,
 		Duration:    duration,
 	}
 
