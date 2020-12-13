@@ -36,9 +36,13 @@ func main() {
 	g.Static("/files", "./static/files")
 
 	g.GET("/ptd", controlls.HandleVersion)
-	g.GET("/edit", controlls.HandleEdit)
 	g.GET("/reload", controlls.HandleReload)
 
+	r := g.Group("/mission")
+	{
+		r.GET("/all", controlls.SelectAllMissions)
+		r.GET("/select", controlls.SelectMissionsByRoleName)
+	}
 	g.POST("/mission", controlls.HandleMission)
 
 	err = g.Run("0.0.0.0:19999")

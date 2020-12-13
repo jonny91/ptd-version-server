@@ -2,7 +2,6 @@ package controlls
 
 import (
 	"PTDVersionServer/config"
-	"PTDVersionServer/dto"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -24,12 +23,6 @@ func HandleVersion(context *gin.Context) {
 			"force":    updateConfig,
 		})
 	}
-}
-
-func HandleEdit(context *gin.Context) {
-	context.HTML(http.StatusOK, "edit.html", dto.Message{
-		Message: "111",
-	})
 }
 
 func HandleReload(ctx *gin.Context) {

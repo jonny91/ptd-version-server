@@ -5,7 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
 	_ "github.com/nsqio/go-nsq"
+	"net/http"
 	"strconv"
 	"time"
 )
@@ -41,4 +43,49 @@ func HandleMission(context *gin.Context) {
 	resultStr, _ := json.Marshal(m)
 	fmt.Println(string(resultStr))
 	Send2MQ("mission", resultStr)
+}
+
+func SelectAllMissions(context *gin.Context) {
+	var result []dto.MissionResult
+	DB.Find(&result)
+	context.JSON(http.StatusOK, gin.H{
+		"status": http.StatusOK,
+		"msg":    result,
+	})
+}
+
+func SelectMissionsByRoleName(context *gin.Context) {
+	roleName, roleNameOk := context.GetQuery("rolename")
+	t, timeOk := context.GetQuery("time")
+	var result []dto.MissionResult
+	var r *gorm.DB
+	if roleNameOk {
+		r = DB.Where("role_name = ?", roleName)
+	}
+
+	if timeOk {
+		t1, err := time.Parse("2006-01-02", t)
+		if err != nil {
+			fmt.Println(err)
+			context.JSON(http.StatusBadRequest, gin.H{
+				"status": http.StatusBadRequest,
+			})
+		}
+		t2 := t1.AddDate(0, 0, 1)
+
+		if r != nil {
+			r = r.Where("time >= ? and time < ?", t1, t2)
+		} else {
+			r = DB.Where("time >= ? and time < ?", t1, t2)
+		}
+	}
+
+	if r != nil {
+		r.Find(&result)
+		context.JSON(http.StatusOK, gin.H{
+			"status": http.StatusOK,
+			"msg":    result,
+		})
+	}
+
 }
