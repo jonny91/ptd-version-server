@@ -62,21 +62,24 @@ func SelectMissionsByRoleName(context *gin.Context) {
 	if roleNameOk {
 		r = DB.Where("role_name = ?", roleName)
 	}
-
+	local, _ := time.LoadLocation("Local")
 	if timeOk {
-		t1, err := time.Parse("2006-01-02", t)
+		t1, err := time.ParseInLocation("2006-01-02", t, local)
+		//time.Parse("2006-01-02", t)
 		if err != nil {
 			fmt.Println(err)
 			context.JSON(http.StatusBadRequest, gin.H{
 				"status": http.StatusBadRequest,
 			})
+			return
 		}
+
 		t2 := t1.AddDate(0, 0, 1)
 
 		if r != nil {
-			r = r.Where("time >= ? and time < ?", t1, t2)
+			r = r.Where("time between ? and  ?", t1, t2)
 		} else {
-			r = DB.Where("time >= ? and time < ?", t1, t2)
+			r = DB.Where("time between ? and  ?", t1, t2)
 		}
 	}
 
